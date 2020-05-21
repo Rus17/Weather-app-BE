@@ -1,0 +1,17 @@
+
+  {{> Header title="Choose cities" name=name}}
+  
+  {{> Menu name=name}}
+  
+  <div class="content">
+    <div class="title">
+      This service provides weather forecasts <br> for your favorite cities.
+    </div>
+    
+    <div id="listCities" style="visibility: hidden;">{{listCities}}</div>
+    
+    <form id="citySelection" autocomplete="off">
+    </form>    
+  </div>
+
+<script type="text/javascript" src="/js/chooseCities.js"></script>

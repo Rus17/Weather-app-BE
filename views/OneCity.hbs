@@ -1,0 +1,34 @@
+  {{> Header title="One City" name=name}}  
+
+  {{> Menu name=name}}
+
+  <div class="content">
+    <div class="title">
+      Weather for 5 days in {{cityInfo.city.name}}
+    </div>
+   
+    <div class="citiesContainer">      
+       
+      <div class="date">{{this.dt_txt}}</div>
+      <div class="cityOne">
+        <div class="title">Date</div>
+        <div class="title">Temp</div>
+        <div class="title">Wind speed</div>        
+        <div class="title">Pressure</div>
+        <div class="title">Humidity</div>
+        <div class="title">Main</div>
+        <div class="title">Description</div>
+        
+        {{#each cityInfo.list}}
+          <div>{{this.dt_txt}}</div>
+          <div>{{this.main.temp}} Fahrenheit</div>
+          <div>{{this.wind.speed}}  meter/sec</div>          
+          <div>{{this.main.pressure}} hPa</div>
+          <div>{{this.main.humidity}} %</div>
+          <div>{{this.weather.0.main}}</div>
+          <div>{{this.weather.0.description}}</div>
+        {{/each}}      
+      </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,22 @@
+<div class="menu">
+  {{#if name}}
+  
+    <ul class="menuContainer">      
+      <li>
+        <a class="menuItem" href="/My_favorite_cities">My favorite cities</a>       
+      </li>
+      <li>
+        <a class="menuItem" href="/Choose_cities_on">Choose cities</a>        
+      </li>      
+      <li>
+        <div class="menuItem" onclick="handlerLogout()">
+          Logout
+        </div>          
+      </li>
+    </ul>    
+  {{else}}    
+    <div class="menuContainer">To use this resource, register or log in.</div>
+  {{/if}}
+</div>
+
+<script type="text/javascript" src="../js/menu.js"></script>

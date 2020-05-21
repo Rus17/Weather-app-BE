@@ -1,0 +1,71 @@
+<div class="header">
+ 
+  <div class="item" >
+    <h1>{{title}}</h1>
+  </div>
+
+  {{#if name}}
+    <div class="item" >
+      Welcome {{name}}!
+    </div>
+    
+  {{else}}
+    <div class="item" >
+      <div class="error"></div>
+      {{#if logReg}}
+        <div>Login</div>
+      {{else}}
+        <div>Register</div>
+      {{/if}}
+
+      {{#if logReg}}
+        <form id="log">
+      {{else}}
+        <form id="reg">
+      {{/if}}
+
+      <input
+             class="field"          
+             type="text" 
+             name="login" 
+             autocomplete="off" 
+             placeholder="Enter your name" 
+             minlength="2" 
+             maxlength="32" 
+             required 
+             />
+      {{#if logReg}}
+      {{else}}
+        <input
+           class="field"
+           type="email" 
+           name="email" 
+           autocomplete="off"
+           placeholder="Enter your email" 
+           required 
+         /> 
+      {{/if}}
+
+      <input
+             class="field"
+             type="password" 
+             name="pass"
+             autocomplete="off"
+             placeholder="Enter password" 
+             minlength="2" 
+             maxlength="16" 
+             required 
+             /> 
+      <input class="field" type="submit" value="Send" />
+      </form>
+
+      {{#if errText}}
+        <div class="error">{{errText}}</div>
+      {{/if}}
+
+      {{#if logReg}}
+        <a href="/register">To register</a>
+      {{/if}}
+    </div>
+  {{/if}}
+</div>

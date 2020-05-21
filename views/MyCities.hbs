@@ -1,0 +1,27 @@
+
+  {{> Header title="Favorite cities" name=name}}
+
+  {{> Menu}}
+
+  <div class="content">
+    <div class="title">
+      This service provides weather forecasts <br> for your favorite cities.
+    </div>
+
+    <div class="citiesContainer">
+     
+      {{#each arrCitiesWeather}}       
+        <div class="cityItem" onclick="onclickHandler(event)">           
+          <div class="cityName">{{this.name}}</div>
+          <div>Temp</div><div>{{this.main.temp}} Fahrenheit</div>
+          <div>Wind speed</div><div>{{this.wind.speed}}  meter/sec</div>
+          <div>Description</div><div>{{this.weather.0.description}}</div>
+          <div>Pressure</div><div>{{this.main.pressure}} hPa</div>
+          <div>Humidity</div><div>{{this.main.humidity}} %</div>
+          <div>Visibility</div><div>{{this.visibility}} meter</div>          
+        </div>        
+      {{/each}}
+    </div>
+  </div>
+
+<script type="text/javascript" src="/js/myCities.js"></script>

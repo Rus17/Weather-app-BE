@@ -1,0 +1,98 @@
+.container{
+  width: 1200px; 
+  margin: 0 auto
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+  padding: 20px;
+  height: 200px;
+}
+
+.menu{
+  background-color: bisque;  
+}
+
+.menu .menuContainer{
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu li{
+  list-style-type: none;  
+}
+
+.menuItem{
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
+.menuItem:hover{
+  text-decoration: underline;;
+}
+
+.content{
+  background-color: lemonchiffon;
+  width: 100%;
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.field{
+  display: block;
+}
+
+.error{
+  color: red;
+  font-weight: bold;
+}
+
+.citiesContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#citySelection{
+  margin-left: 50px;
+  padding-bottom: 50px;
+}
+
+.cityItem{
+  margin: 10px;
+  flex: 1 1 300px;
+  background-color: lavender;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  cursor: pointer;
+}
+
+.cityOne{
+  margin: 10px;
+  flex: 1 1 300px;
+  background-color: lavender;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.date, .cityName{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 auto;
+  grid-column:1/3;
+  margin-bottom: 10px;
+}
